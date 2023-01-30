@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiteRicardo</title>
+    <style>
+        body{
+            background-color: rgb(242, 247, 242);
+            color: rgb(17, 17, 17);
+            font: normal 20pt arial;
+         } 
+          p{
+            color: rgb(89, 35, 189);
+
+
+          } 
+
+    </style>
+
+</head>
+<body>
+    <h1>Site do Ricardo</h1>
+    <p>Seja bem vindo(a)</p>
+    <p>Voce esta acessando o site do ricardo.</p>
+    <p>Vamos aos calculos dos seus lucros</p>
+    <script>
+            
+        var nome = window.prompt('Olá, digite o seu nome')
+        var salario = Number(window.prompt('digite o seu salario'))
+        var meses = Number(window.prompt('digite a quantos meses voce recebe esse salario'))
+        var salariototal = salario * meses
+        document.write(`${nome.toUpperCase()} vamos aos seus salarios</br>`)
+        document.write(`Com um salario de ${salario.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'})} em ${meses} meses, 
+        voce recebeu no total <strong>${salariototal.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'})}</strong></br>`)
+
+        var casa = 200000
+        var carro = 50000
+        document.writeln(salariototal >= casa ? 'Voce consegue comprar uma casa</br>': 'Voce nao consegue comprar uma casa</br>')
+        document.writeln(salariototal >= carro ? 'Voce consegue comprar um carro</br>' : 'Voce nao consegue comprar um carro</br>')
+       
+        
+        
+
+    </script>
+    
+</body>
+</html>

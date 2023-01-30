@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body{
+            background-color: rgb(16, 148, 22);
+            font: normal 18pt Arial;
+            line-height: 25px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Sua Nacionalidade</h1>
+    <p>Insira o seu país de nascimento</p>
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="verifica()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        
+        function verifica(){
+            var res = document.getElementById('res')
+            var a = document.getElementById('pais')
+            var pais = a.value
+            res.innerHTML = `<p>Voce nasceu no(a) ${pais}</p>`
+            if(pais == "brasil" || pais == 'Brasil'){
+                res.innerHTML += '<p>Portanto voce é Brasileiro</p>'
+            }else{
+                res.innerHTML += '<p>Portanto voce é Estrangeiro</p>'
+            }
+            
+           
+            
+            
+        }
+    </script>
+    
+</body>
+</html>

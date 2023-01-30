@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>MEU PRIMEIRO PROGRAMA MANEIRO</h1>
+    </header>
+    <section>
+        <div>
+            Digite seu nome: <input type="text" name="nome" id="nome">
+        </div>
+        <div>
+            Digite sua idade: <input type="number" name="idade" id="idade">
+        </div>
+        <div>
+            Digite seu país: <input type="text" name="pais" id="pais">
+        </div>
+        <div>
+            Digite seu sexo[M/F]: <input type="text" name="sexo" id="sexo">
+        </div>
+        <div>
+            <input type="button" value="Enviar dados" onclick="enviar()">
+        </div>
+    </section>
+    <footer>
+        <div id="res">
+           
+
+        </div>
+    </footer>
+    <script>
+        function enviar(){
+            var a = document.querySelector('input#nome')
+            var b = document.querySelector('input#idade')
+            var c = document.querySelector('input#pais')
+            var d = document.querySelector('input#sexo')
+            var nome = a.value
+            var idade = Number(b.value)
+            var pais = c.value
+            var sexo = d.value
+            var res = document.querySelector('div#res')
+           
+            if(idade >= 18 && pais == 'brasil'){
+                res.innerHTML = (`<p>${nome}, você é um cidadão brasileiro de maior idade</p>`)
+            }else if(idade < 18 && pais == 'brasil'){
+                res.innerHTML = (`<p>${nome}, você é um cidadão brasileiro de menor idade</p>`)
+            }else if(idade >= 18 && pais != 'brasil'){
+                res.innerHTML = (`<p>${nome}, você é um cidadão estrangeiro de maior idade</p>`)
+            }else if(idade < 18 && pais != 'brasil'){
+                res.innerHTML = (`<p>${nome}, você é um cidadão estrangeiro de menor idade</p>`)
+            }
+            switch(sexo){
+                case 'm':
+                    res.innerHTML += (' <p>voce é homem</p>')
+                    break
+                case 'f':
+                    res.innerHTML += (' <p>voce é mulher</p>')
+                    break
+                default:
+                    res.innerHTML +=(' <p>sexo nao identificado</p>')
+
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

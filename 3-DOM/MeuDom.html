@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Dom</title>
+    <style>
+        body{
+            background-color: olivedrab;
+            color: black;
+            font: normal 18pt Arial;
+
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Site do Ricardo</h1>
+    <p>Olá, agora irei testar as funçoes que ja aprendi de <strong>JavaScript</strong></p>
+    <p>Estou apenas começando a aprender a linguagem, mas vamos aos testes</p>
+    <div>Este aqui é a tag div, que ainda nao sei direito para que serve</div>
+    <p>E este aqui é um <strong>parágrafo</strong></p>
+    <h2>Agora vamos aos resultados</h2>
+    
+    <script>
+      
+      window.alert('Bem vindo')
+        var nome = window.prompt('Qual seu nome?')
+        window.document.write(`Olá ${nome}, vamos aos seus cauculos</br>`)
+        var anoAtual = window.prompt('Em que ano estamos ?')
+        var anoNasc = window.prompt('em que ano voce nasceu?')
+        var idade = anoAtual - anoNasc
+        window.document.write(`Ja foi confirmado que voce tem ${idade} anos</br>`)
+        var salario = window.prompt('qual o seu salario?')
+        var tempo = window.prompt('a quantos anos recebe esse salario?')
+        patrimonio = salario * 12 * tempo
+        document.write(`Seu patrimonio total é de ${patrimonio.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'})} se nao gastou nada</br>`)
+        document.write( patrimonio >= 200000 ? 'voce ja tem uma casa</br>':'Voce ainda mora de aluguel</br>')
+        document.write( patrimonio >= 50000 ? 'voce ja tem um carro</br>' : 'voce anda de uber</br>')
+        
+
+        var x1 = window.document.getElementsByTagName('h1')[0]
+        var x2 = document.getElementsByTagName('p')[0]
+        var x3 = document.getElementsByTagName('p')[1]
+        var x4 = document.getElementsByTagName('div')[0]
+        var x5 = document.getElementsByTagName('p')[2]
+        var x6 = document.getElementsByTagName('h2')[0]
+        x1.style.background = 'purple'
+        x1.style.color = 'white'
+        x2.style.background = 'orange'
+        x2.style.color = 'olivedrab'
+        x6.style.background = 'blue'
+        //x.style.background = 'orange'
+        //y.style.color = 'blue'
+        //x.innerText = 'ola'
+
+    </script>
+</body>
+</html>
